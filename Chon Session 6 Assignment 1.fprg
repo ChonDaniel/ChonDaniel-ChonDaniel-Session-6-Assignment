@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="daniel"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-10-29 03:23:27 PM"/>
+        <attribute name="created" value="ZGFuaWVsO0RFU0tUT1AtVUk5RjNWNzsyMDIwLTEwLTI5OzAxOjE0OjE3IFBNOzI5NTU="/>
+        <attribute name="edited" value="ZGFuaWVsO0RFU0tUT1AtVUk5RjNWNzsyMDIwLTEwLTI5OzAzOjIzOjI3IFBNOzE7MzA2Ng=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="years" type="Integer" array="False" size=""/>
+            <call expression="service()"/>
+        </body>
+    </function>
+    <function name="service" type="Integer" variable="award">
+        <parameters/>
+        <body>
+            <declare name="award" type="Integer" array="False" size=""/>
+            <declare name="years" type="Integer" array="False" size=""/>
+            <output expression="&quot;How many years did you work for the organization? &quot;" newline="True"/>
+            <input variable="years"/>
+            <if expression="5 &gt; years">
+                <then>
+                    <assign variable="award" expression="100"/>
+                </then>
+                <else>
+                    <if expression="years &gt; 10">
+                        <then>
+                            <assign variable="award" expression="1000"/>
+                        </then>
+                        <else>
+                            <assign variable="award" expression="500"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="&quot;Your service level reward is: &quot; &amp; award" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

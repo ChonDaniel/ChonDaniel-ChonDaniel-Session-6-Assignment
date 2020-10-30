@@ -1,0 +1,27 @@
+def employees_bonus(code, years):
+    if code == "a" and years > 10:
+        bonus = 10000
+    elif code == "b" and years > 15:
+        bonus = 9000
+    elif code == "a" and 5 < years and years < 10:
+        bonus = 8000
+    else:
+        bonus = 5000
+    
+    return bonus
+
+def main():
+    print("What is the employee's last name? ")
+    name = input()
+    
+    print("What is the emplyee's job code? ")
+    code = input()
+    
+    print("How long has the employees worked for? ")
+    years = int(input())
+    
+    bonus = employees_bonus(code, years)
+    
+    print(name + " $" + str(bonus))
+
+main()

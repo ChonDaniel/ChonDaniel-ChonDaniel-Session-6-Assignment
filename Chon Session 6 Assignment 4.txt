@@ -1,0 +1,20 @@
+def interest_rate(term):
+    if term == 5 or term == 10:
+        rate = 2
+    elif term == 1 or term == 2 or term == 3:
+        rate = 1
+    else:
+        rate = 0.5
+    
+    return rate
+
+def main():
+    
+    print("What is the term? ")
+    term = int(input())
+    
+    rate = interest_rate(term)
+    
+    print("Term: " + str(term) + " Rate: " + str(rate) + "%")
+
+main()

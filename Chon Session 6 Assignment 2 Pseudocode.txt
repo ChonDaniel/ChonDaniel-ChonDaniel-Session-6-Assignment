@@ -1,0 +1,36 @@
+function main()
+    output "How many items did you order? "
+
+    input quantity
+
+    unit = unitPrice(quantity)
+
+    output "You ordered " + quantity + " items."
+
+    unitPrice(quantity)
+
+    extendedPrice(quantity, unit)
+end 
+
+function extendedPrice(quantity, unit)
+
+    price = unit * quantity
+
+    output "The total is: $" + price
+    
+    return price
+end 
+
+function unitPrice(quantity)
+    if quantity > 1000 then
+        unit = 8
+    elseif quantity > 500 then
+            unit = 10
+    else
+            unit = 12
+    end If
+
+    output "Unit price: $" + unit
+    
+    return unit
+end 

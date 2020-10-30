@@ -1,0 +1,22 @@
+function main()
+    output "What is the term? "
+    input term
+
+    rate = interestRate(term)
+
+    output "Term: " + term + " Rate: " + rate + "%"
+
+end 
+
+function interestRate(term)
+
+    if term = 5 OR term = 10 then
+        rate = 2
+    elseif term = 1 OR term = 2 OR term = 3 then
+        rate = 1
+    else
+        rate = 0.5
+    end If
+    
+    return rate
+end 

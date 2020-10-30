@@ -1,0 +1,22 @@
+def interest_rate(amount, term):
+    if amount > 10 and term >= 10:
+        rate = 5
+    elif amount > 5000 and amount < 10000 and term >= 5:
+        rate = 4
+    else:
+        rate = 2
+    
+    return rate
+
+def main():
+    print("What is the amount in the account? ")
+    amount = int(input())
+    
+    print("How many terms? ")
+    term = int(input())
+    
+    rate = interest_rate(amount, term)
+    
+    print("Amount: " + str(amount) + " Term: " + str(term) + " Rate: " + str(rate) + "%")
+
+main()

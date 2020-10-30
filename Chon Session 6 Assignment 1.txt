@@ -1,0 +1,15 @@
+def service():
+    print("How many years did you work for the organization? ")
+    years = int(input())
+    if 5 > years:
+        award = 100
+    elif 10 >= years >= 5:
+        award = 500
+    else:
+        award = 1000
+    print("Your service level reward is: " + str(award))
+    
+    return award
+
+# Main
+service()

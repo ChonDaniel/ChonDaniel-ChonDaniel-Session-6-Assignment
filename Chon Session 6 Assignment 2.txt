@@ -1,0 +1,32 @@
+def extended_price(quantity, unit):
+    price = unit * quantity
+    print("The total is: $" + str(price))
+    
+    return price
+
+def unit_price(quantity):
+    if quantity > 1000:
+        unit = 8
+    elif quantity > 500:
+        unit = 10
+    else:
+        unit = 12
+        
+    print("Unit price: $" + str(unit))
+    
+    return unit
+
+def main():
+    print("How many items did you order? ")
+    
+    quantity = int(input())
+    
+    unit = unit_price(quantity)
+    
+    print("You ordered " + str(quantity) + " items.")
+    
+    unit_price(quantity)
+    
+    extended_price(quantity, unit)
+
+main()

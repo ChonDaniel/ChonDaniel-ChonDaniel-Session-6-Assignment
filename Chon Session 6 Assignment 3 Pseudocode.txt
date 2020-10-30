@@ -1,0 +1,28 @@
+function main()
+    output "What is the employee's last name? "
+    input name
+
+    output "What is the emplyee's job code? "
+    input code
+
+    output "How long has the employees worked for? "
+    input years
+
+    bonus = employeesBonus(code, years)
+
+    output name + " $" + bonus
+end 
+
+function employeesBonus(code, years)
+    if code = "a" AND years > 10 then
+        bonus = 10000
+    elseif code = "b" AND years > 15 then
+        bonus = 9000
+    elseif code = "a" AND 5 < years AND years < 10 then
+        bonus = 8000
+    else
+        bonus = 5000
+    end If
+    
+    return bonus
+end function

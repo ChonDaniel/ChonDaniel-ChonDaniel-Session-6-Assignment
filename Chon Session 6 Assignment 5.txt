@@ -1,0 +1,22 @@
+def interest_rate(amount):
+    if amount > 10000:
+        rate = 0.03
+    elif amount < 10000 and amount > 5000:
+        rate = 0.02
+    else:
+        rate = 0.01
+    
+    return rate
+
+
+def main():
+    print("What is the amount in the account?")
+    amount = int(input())
+    
+    rate = interest_rate(amount)
+    
+    total = amount * rate
+    
+    print("Amount: " + str(amount) + " Interest rate: " + str(rate) + " Rate and interest in 1 year: " + str(total))
+
+main()
